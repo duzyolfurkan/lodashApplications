@@ -32,7 +32,7 @@ var foreachRightArray = lodash.forEachRight(myArray, function(value){
   //value dizinin elemanlarıdır, istenen işlem yapılabilir.
 }); //Dizi elemanlarını tersten gezer
 var groupByArray = lodash.groupBy(myArray, 'length'); //Uzunluğa göre gruplama yapar, istenen iterasyon verilebilir.
-var includeArray = lodash.includes(myArray, 7); //Eğer iterasyondaki değer varsa true, yoksa false döner.
+var includeArray = lodash.includes(myArray, 7); //Eğer iterasyondaki değer varsa true, yoksa false döner..
 
 //Lodash Screening
 console.log("The default array:", myArray);
