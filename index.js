@@ -6,7 +6,7 @@ var myArray = [1,2,3,4,5,6,7,8.4];
 
 //Test Object
 var myObject = [
-    { 'user': 'barney', 'age': 36, 'active': false },
+    { 'user': 'barney', 'age': 36, 'active': true },
     { 'user': 'fred',   'age': 40, 'active': false }
   ];
 
@@ -32,8 +32,14 @@ var foreachRightArray = lodash.forEachRight(myArray, function(value){
   //value dizinin elemanlarıdır, istenen işlem yapılabilir.
 }); //Dizi elemanlarını tersten gezer
 var groupByArray = lodash.groupBy(myArray, 'length'); //Uzunluğa göre gruplama yapar, istenen iterasyon verilebilir.
-var includeArray = lodash.includes(myArray, 7); //Eğer iterasyondaki değer varsa true, yoksa false döner..
+var includeArray = lodash.includes(myArray, 7); //Eğer iterasyondaki değer varsa true, yoksa false döner.
+var filterObject = lodash.filter(myObject, function(o) {
+  return !o.active;
+});//İstenen iterasyona göre filtreleme yapar
+var rejectObject = lodash.reject(myObject, function(o) {
+  return !o.active;
+}); //İStenen iterasyondaki objeyi alır ve diğerlerini gösterir.
 
 //Lodash Screening
 console.log("The default array:", myArray);
-console.log("The function shows:" , includeArray);
+console.log("The function shows:" , rejectObject);
